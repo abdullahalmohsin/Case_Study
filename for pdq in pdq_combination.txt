@@ -1,0 +1,10 @@
+for pdq in pdq_combination:
+    try:
+        model=ARIMA(train,order=pdq).fit()
+        pred=model.predict(start=len(train),end=(len(df)-1))
+        error=np.sqrt(mean_squared_error(test,pred))
+        order1.append(pdq)
+        rmse.append(error)
+        
+    except:
+        continue

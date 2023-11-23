@@ -1,0 +1,4 @@
+cd Desktop
+mkdir jupyter_prac
+cd jupyter_prac
+jupyter notebook
